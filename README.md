@@ -30,3 +30,9 @@ Exploration Elements: Explore diverse environments and interact with objects to 
 Achievements and Rewards: Earn achievements and unlock rewards for completing quests, mastering puzzles, and achieving high scores.
 Multiplayer Mode: Challenge friends or compete with other players in multiplayer mode for added excitement and social interaction.
 Dynamic Soundtrack: Enjoy an immersive gaming experience with a dynamic soundtrack that adapts to the game's progression and atmosphere.
+Random selection of words from a provided word list.
+GUI interface with graphical representations of the hangman.
+Interactive gameplay that responds to user input.
+Tracking of correct and incorrect guesses.
+Win condition when the user guesses the word correctly.
+Resetting the game for a new round.
