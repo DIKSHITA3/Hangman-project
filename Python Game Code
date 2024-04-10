@@ -1,11 +1,13 @@
 import random
+import time
 
 # List of words related to the chosen theme
 words = ["elephant", "giraffe", "tiger", "lion", "zebra", "monkey", "kangaroo", "rhinoceros", "hippopotamus", "panda"]
 
 # Function to display the hangman as a cartoon
 def display_hangman(incorrect_guesses):
-    stages = [  # Hangman stages
+    # Hangman stages
+    stages = [
         '''
            --------
            |      |
@@ -98,6 +100,7 @@ def hangman():
     incorrect_guesses = 0
     max_attempts = 6  # Maximum incorrect guesses allowed
     hint = "Hint: It's an animal."
+    start_time = time.time()  # Start the timer
 
     while incorrect_guesses < max_attempts:
         print(display_hangman(incorrect_guesses))
@@ -121,6 +124,7 @@ def hangman():
             print("Correct!")
             if display_word(word, guessed_letters) == word:
                 print("Congratulations! You've guessed the word:", word)
+                print("Your time:", time.time() - start_time)  # Print the time taken
                 break
         else:
             print("Incorrect guess!")
@@ -129,6 +133,7 @@ def hangman():
     if incorrect_guesses == max_attempts:
         print(display_hangman(incorrect_guesses))
         print("Sorry, you've run out of attempts. The word was:", word)
+        print("Your time:", time.time() - start_time)  # Print the time taken
 
 # Run the game
 hangman()
